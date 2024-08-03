@@ -99,7 +99,6 @@ const num = 3;
 
 // Activity 5: Combining Conditions
 const year = 1900;
-
 if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
     console.log(`${year} is a leap year`);
 } else {
