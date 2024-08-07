@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10: Event Handling</title>
+</head>
+<body>
+    <h1>Task 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad consectetur doloribus dolor explicabo. Porro velit delectus, animi cupiditate dolorum perferendis sint vel dolore, voluptas suscipit odio vitae quae adipisci?</p>
+    <button id="btn">Change text content</button>
+</body>
+<script>
+    const btn = document.querySelector('#btn')
+    console.log(btn);
+    btn.addEventListener('click', () => {
+        const p = document.querySelector('p')
+        p.textContent = 'New content'
+    })
+</script>
+</html>

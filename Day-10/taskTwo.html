@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10: Event Handling</title>
+    <style>
+        #toggleImg{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 2</h1>
+    <button id="toggleImg">Toggle</button>
+    <img src="https://images.pexels.com/photos/18681382/pexels-photo-18681382/free-photo-of-coding.jpeg" height="500px"  alt="No Image">
+</body>
+<script>
+    const toggleImg = document.querySelector('#toggleImg')
+    toggleImg.addEventListener('dblclick', () => {
+        const img = document.querySelector('img')
+        if (img.style.visibility === 'visible') {
+            img.style.visibility = 'hidden'
+        } else {
+            img.style.visibility = 'visible'
+        }
+    })
+</script>
+</html>

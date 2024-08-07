@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 7 & 8</h1>
+    <form id="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+      <label for="mySelect">Choose an option:</label>
+      <select name="gender" id="mySelect">
+        <option value="">--Please choose an option--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <p id="selectedValue">Selected value:</p>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const formObject = {};
+        formData.forEach((value, key) => {
+          formObject[key] = value;
+        });
+        console.log("Form Data:", formObject);
+      });
+
+      const selectDropdown = document.getElementById("mySelect");
+      const selectedValueParagraph = document.getElementById("selectedValue");
+
+      selectDropdown.addEventListener("change", function () {
+        const selectedValue = selectDropdown.value;
+
+        selectedValueParagraph.textContent = "Selected value: " + selectedValue;
+      });
+    </script>
+  </body>
+</html>
